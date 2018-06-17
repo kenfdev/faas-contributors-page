@@ -7,11 +7,11 @@
           <v-container fluid grid-list-sm>
             <v-layout row wrap>
               <v-flex v-for="contrib in contribs" :key="contrib.key" xs4 sm3 md2>
-                <img :src="'https://github.com/' + contrib.key + '.png'" class="image" alt="lorem" width="100%" height="100%">
+                <!-- <img :src="'https://github.com/' + contrib.key + '.png'" class="image" alt="lorem" width="100%" height="100%"> -->
+                <ReactiveImg :src="'https://github.com/' + contrib.key + '.png'" :title="contrib.key"></ReactiveImg>
               </v-flex>
             </v-layout>
           </v-container>
-          <v-footer class="mt-5"></v-footer>
         </v-card>
       </v-flex>
     </v-layout>
@@ -20,6 +20,7 @@
 
 <script>
 // import axios from 'axios';
+import ReactiveImg from './ReactiveImg';
 
 const json = {
   uniqueAuthors: 104,
@@ -133,6 +134,9 @@ const json = {
 
 export default {
   name: 'HelloWorld',
+  components: {
+    ReactiveImg
+  },
   data() {
     return {
       totalContributors: ''
