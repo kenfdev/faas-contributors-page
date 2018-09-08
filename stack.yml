@@ -9,3 +9,4 @@ functions:
     image: kenfdev/contributors-page:0.9.1
     environment:
       content_type: text/html
+
