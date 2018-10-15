@@ -3,7 +3,7 @@
     <v-app>
       <v-content>
         <v-layout row wrap>
-          <v-flex offset-xs2 xs8>
+          <v-flex xs12>
             <router-view/>
           </v-flex>
         </v-layout>
