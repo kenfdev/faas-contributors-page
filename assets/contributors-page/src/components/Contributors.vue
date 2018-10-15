@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-layout row>
-      <v-flex xs12 sm10 offset-sm1>
+      <v-flex xs12>
         <v-card>
           <v-subheader>Contributors: {{ totalContributors }}</v-subheader>
           <v-container fluid grid-list-sm>
             <v-layout row wrap>
-              <v-flex v-for="contrib in contribs" :key="contrib.key" xs4 sm3 md2>
+              <v-flex style="max-width: 5%;" v-for="contrib in contribs" :key="contrib.key">
                 <!-- <img :src="'https://github.com/' + contrib.key + '.png'" class="image" alt="lorem" width="100%" height="100%"> -->
                 <ReactiveImg :src="'https://github.com/' + contrib.key + '.png'" :title="contrib.key"></ReactiveImg>
               </v-flex>
